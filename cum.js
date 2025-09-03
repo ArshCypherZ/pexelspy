@@ -7,7 +7,7 @@ const client = createClient('PEXELS_API_KEY');
 async function searchPhotos(query) {
 
     // search photos
-    const photos = client.photos.search({ query, per_page: 10, page: 1 });
+    const photos = await client.photos.search({ query, per_page: 10, page: 1 });
 
     /*
     "example response:
